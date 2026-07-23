@@ -21,6 +21,15 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
+// Sicherheitsnetz: oberhalb der Falz sichtbare Reveal-Elemente garantiert einblenden,
+// falls der IntersectionObserver nicht auslöst (BFCache-Restore, langsame Geräte).
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.in)').forEach((el) => {
+    const r = el.getBoundingClientRect();
+    if (r.top < innerHeight && r.bottom > 0) { el.classList.add('in'); io.unobserve(el); }
+  });
+}, 600);
+
 // Jahr im Footer
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
