@@ -75,6 +75,7 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
 /* Hero-Video: fast-Vollbild, blasses Navy-Overlay, Text bleibt lesbar */
 .hero{min-height:calc(100dvh - 74px);display:flex;align-items:center;}
 .hero__bg{filter:saturate(.82) brightness(.88);}
+.hero--video .hero__bg{transition:opacity 2.5s ease!important;} /* laengere Ueberblendung Video->Standbild */
 .hero__bg-overlay{background:linear-gradient(180deg,rgba(8,19,38,.80) 0%,rgba(8,19,38,.64) 45%,rgba(8,19,38,.9) 100%)!important;opacity:1!important;}
 .hero h1,.hero .lead,.hero .eyebrow{text-shadow:0 2px 24px rgba(0,0,0,.55);}
 /* Hero-Eyebrow groesser: soll zwei volle Zeilen ausfuellen */
