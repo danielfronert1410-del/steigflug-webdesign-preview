@@ -125,7 +125,7 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
         <source src="assets/video/hero-sky-climb.mp4" type="video/mp4" />
       </video>
       <div class="hero__bg-overlay"></div>
-      <script>(function(){var h=document.currentScript.closest('.hero'),v=h.querySelector('.hero__bg');if(!v)return;v.loop=false;var reset=function(){try{v.currentTime=0;}catch(e){}};reset();v.addEventListener('loadedmetadata',reset);var toStill=function(){h.classList.add('hero--stilled');};v.addEventListener('ended',function(){if(!v.duration||v.currentTime>=v.duration-0.6)toStill();});v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>=v.duration-0.05)toStill();});})();</script>
+      <script>(function(){var h=document.currentScript.closest('.hero'),v=h.querySelector('.hero__bg');if(!v)return;v.loop=false;var reset=function(){try{v.currentTime=0;}catch(e){}};reset();v.addEventListener('loadedmetadata',reset);var toStill=function(){h.classList.add('hero--stilled');};v.addEventListener('ended',toStill);v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>=v.duration-0.02)toStill();});})();</script>
       <div class="wrap hero__grid">
         <div class="reveal">
           <p class="eyebrow">Websites & Sichtbarkeit für kleine & mittelständische Unternehmen</p>
