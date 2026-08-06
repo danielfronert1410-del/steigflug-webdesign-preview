@@ -87,6 +87,25 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
 /* Akzent warm halten */
 .quote span{color:var(--warm)!important;}
 
+/* Paket-/Preisuebersicht (Leistungen-Seite) */
+.pricing-group__title{font-size:1.5rem;margin:6px 0 6px;color:var(--ink);}
+.pricing-group__baseline{color:var(--muted-text)!important;font-size:.95rem;line-height:1.5;margin:0 0 22px;max-width:78ch;}
+.pricing-group__baseline strong{color:var(--accent-dim);}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:52px;align-items:stretch;}
+.pricing-card{position:relative;display:flex;flex-direction:column;background:#0E1D34!important;border:1px solid rgba(120,160,210,.18);border-radius:16px;padding:28px 24px;}
+.pricing-card--featured{border-color:var(--accent)!important;box-shadow:0 0 60px -24px rgba(46,139,236,.6);}
+.pricing-card__badge{position:absolute;top:-12px;left:24px;background:var(--warm);color:#0A1428;font-weight:700;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:999px;}
+.pricing-card__name{font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-dim);font-size:.9rem;}
+.pricing-card__price{font-size:2rem;font-weight:700;margin:6px 0 2px;color:var(--ink);line-height:1.1;}
+.pricing-card__unit{font-size:1rem;font-weight:500;color:var(--muted-text);}
+.pricing-card__tagline{font-style:italic;color:var(--muted-text)!important;margin:2px 0 10px;}
+.pricing-card__for{font-size:.9rem;color:var(--muted-text)!important;margin:0 0 16px;}
+.pricing-card__list{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px;}
+.pricing-card__list li{position:relative;padding-left:26px;font-size:.95rem;line-height:1.4;}
+.pricing-card__list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700;}
+.pricing-card__cta{margin-top:auto;text-align:center;width:100%;}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
+
 /* --- NUR Handy (<=600px): grosses Steigflug-Emblem ganz oben, ueber die volle Seitenbreite. Desktop unveraendert. --- */
 @media (max-width:600px){
   .hero{min-height:0!important;align-items:flex-start!important;padding-top:12px!important;}
@@ -170,6 +189,121 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
         <div class="split__media reveal">
           <img src="assets/img/results.jpg" alt="Laufende Betreuung" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);" />
           
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="wrap">
+        <div class="center narrow reveal" style="margin-bottom:40px;">
+          <p class="eyebrow">Pakete & Preise</p>
+          <h2>Transparente Pakete, faire Startpreise</h2>
+          <p class="lead">Zwei Bausteine: einmalig deine Website bauen, optional monatlich pflegen und sichtbar halten. Alle Preise sind Startangebote zum Markteinstieg.</p>
+        </div>
+        <div class="pricing-group reveal">
+          <h3 class="pricing-group__title">Website-Bau (einmalig)</h3>
+          <p class="pricing-group__baseline"><strong>Immer enthalten:</strong> individuelles Design (kein Baukasten), voll mobil-optimiert, Basis-SEO (Struktur, Meta-Angaben, Sitemap, Schema), KI-Auffindbarkeit (GEO) vorbereitet, Impressum & Datenschutz, Kontaktformular sowie Test & Übergabe.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card reveal">
+            
+            <div class="pricing-card__name">Start</div>
+            <div class="pricing-card__price">ab 990 €</div>
+            <p class="pricing-card__tagline">Dein schlanker Auftritt im Netz</p>
+            <p class="pricing-card__for">Für Einzelunternehmer, Freiberufler und kleine Betriebe.</p>
+            <ul class="pricing-card__list">
+              <li>Onepager oder bis 3 Unterseiten</li>
+              <li>Deine Texte & Bilder eingebunden</li>
+              <li>1 Kontaktformular</li>
+              <li>Basis-SEO & GEO ab Werk</li>
+              <li>1 Korrekturschleife</li>
+            </ul>
+            <a class="btn btn--primary pricing-card__cta" href="kontakt.html">Start anfragen</a>
+          </div>
+          <div class="pricing-card pricing-card--featured reveal">
+            <span class="pricing-card__badge">Beliebt</span>
+            <div class="pricing-card__name">Wachstum</div>
+            <div class="pricing-card__price">2.400 €</div>
+            <p class="pricing-card__tagline">Der Sweet Spot für lokale Sichtbarkeit</p>
+            <p class="pricing-card__for">Für Betriebe mit Einzugsgebiet, die aktiv gefunden werden wollen.</p>
+            <ul class="pricing-card__list">
+              <li>Alles aus Start</li>
+              <li>Bis 12 Seiten</li>
+              <li>Lokale Keyword-Landingpages</li>
+              <li>Google-Unternehmensprofil eingerichtet & optimiert</li>
+              <li>Bewertungen eingebunden</li>
+              <li>2 Korrekturschleifen</li>
+            </ul>
+            <a class="btn btn--primary pricing-card__cta" href="kontakt.html">Wachstum anfragen</a>
+          </div>
+          <div class="pricing-card reveal">
+            
+            <div class="pricing-card__name">Rundum</div>
+            <div class="pricing-card__price">3.900 €</div>
+            <p class="pricing-card__tagline">Die Vollausstattung</p>
+            <p class="pricing-card__for">Für ambitionierte KMU, die Anfragen maximieren wollen.</p>
+            <ul class="pricing-card__list">
+              <li>Alles aus Wachstum</li>
+              <li>KI-Chatbot (beantwortet Kundenfragen 24/7)</li>
+              <li>Kampagnen- & Aktions-Landingpages</li>
+              <li>Conversion-Elemente & Lead-Formulare</li>
+              <li>Analytics-/Tracking-Setup + erstes Reporting</li>
+              <li>Zusätzliche Feinschliff-Runden</li>
+            </ul>
+            <a class="btn btn--primary pricing-card__cta" href="kontakt.html">Rundum anfragen</a>
+          </div>
+        </div>
+        <div class="pricing-group reveal">
+          <h3 class="pricing-group__title">Laufende Betreuung (monatlich)</h3>
+          <p class="pricing-group__baseline"><strong>Immer enthalten:</strong> technische Pflege (Updates, Sicherheit, Backups, Verfügbarkeits-Check), kleine inhaltliche Änderungen und ein fester Ansprechpartner.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card reveal">
+            
+            <div class="pricing-card__name">Sichtbar Basis</div>
+            <div class="pricing-card__price">99 €<span class="pricing-card__unit"> / Monat</span></div>
+            <p class="pricing-card__tagline">Gepflegt & sichtbar bleiben</p>
+            <p class="pricing-card__for">Wenn die Seite läuft und zuverlässig gepflegt sein soll.</p>
+            <ul class="pricing-card__list">
+              <li>Technische Pflege, Updates & Backups</li>
+              <li>Ranking- & GEO-Tracking (Monitoring)</li>
+              <li>Kleinere inhaltliche Änderungen</li>
+              <li>1 Content-Update pro Quartal</li>
+              <li>Kurz-Report je Quartal</li>
+            </ul>
+            <a class="btn btn--primary pricing-card__cta" href="kontakt.html">Basis anfragen</a>
+          </div>
+          <div class="pricing-card pricing-card--featured reveal">
+            <span class="pricing-card__badge">Empfohlen</span>
+            <div class="pricing-card__name">Sichtbar Plus</div>
+            <div class="pricing-card__price">299 €<span class="pricing-card__unit"> / Monat</span></div>
+            <p class="pricing-card__tagline">Aktiv wachsen</p>
+            <p class="pricing-card__for">Für Betriebe, die kontinuierlich sichtbarer werden wollen.</p>
+            <ul class="pricing-card__list">
+              <li>Alles aus Basis</li>
+              <li>Monatlich 1 neues Content-Stück</li>
+              <li>Ranking-/GEO-Monitoring mit Nachschärfung</li>
+              <li>Google-Profil-Pflege (Beiträge & Updates)</li>
+              <li>Monatlicher Report + 1 Call/Monat</li>
+            </ul>
+            <a class="btn btn--primary pricing-card__cta" href="kontakt.html">Plus anfragen</a>
+          </div>
+          <div class="pricing-card reveal">
+            
+            <div class="pricing-card__name">Sichtbar Premium</div>
+            <div class="pricing-card__price">590 €<span class="pricing-card__unit"> / Monat</span></div>
+            <p class="pricing-card__tagline">Sichtbarkeit ist geschäftskritisch</p>
+            <p class="pricing-card__for">Wenn Sichtbarkeit Vorrang hat und du Vollgas willst.</p>
+            <ul class="pricing-card__list">
+              <li>Alles aus Plus</li>
+              <li>Mehr Content (Richtwert 2–4 Stücke/Monat)</li>
+              <li>Aktive Bewertungsstrategie</li>
+              <li>Wettbewerbs-/Keyword-Ausbau & Conversion-Optimierung</li>
+              <li>Regelmäßige Strategie-Calls</li>
+              <li>Priorisierter Support</li>
+            </ul>
+            <a class="btn btn--primary pricing-card__cta" href="kontakt.html">Premium anfragen</a>
+          </div>
         </div>
       </div>
     </section>
