@@ -114,6 +114,13 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
 .kform input[type=radio]{width:auto!important;background:transparent!important;border:none!important;margin-right:9px;accent-color:var(--accent);vertical-align:middle;}
 .kform input[type=date]{width:auto!important;display:inline-block;margin-left:8px;}
 
+/* Verlinkte Branchen-Karten */
+.card--link{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;}
+.card--link:hover{transform:translateY(-3px);border-color:var(--accent)!important;box-shadow:0 0 50px -24px rgba(46,139,236,.6);}
+.card--link h3{color:var(--ink);}
+.card--link p{color:var(--muted-text);}
+.card__more{margin-top:auto;padding-top:12px;color:var(--accent-dim);font-weight:600;font-size:.92rem;}
+
 /* --- NUR Handy (<=600px): grosses Steigflug-Emblem ganz oben, ueber die volle Seitenbreite. Desktop unveraendert. --- */
 @media (max-width:600px){
   .hero{min-height:0!important;align-items:flex-start!important;padding-top:12px!important;}
@@ -348,6 +355,24 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
             </ul>
             <a class="btn btn--primary pricing-card__cta" href="kontakt.html">Mietwebsite anfragen</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="wrap">
+        <div class="center narrow reveal" style="margin-bottom:40px;">
+          <p class="eyebrow">Für deine Branche</p>
+          <h2>Websites für deine Branche in Düsseldorf</h2>
+          <p class="lead">Jede Branche tickt anders. Für diese habe ich eigene Seiten mit den passenden Argumenten:</p>
+        </div>
+        <div class="grid grid--3">
+          <a class="card card--link reveal" href="webdesign-handwerk-duesseldorf.html"><div class="card__icon">🔧</div><h3>Handwerk</h3><p>Elektro, SHK, Maler, Dachdecker, Garten- und Landschaftsbau und mehr.</p><span class="card__more">Mehr erfahren →</span></a>
+          <a class="card card--link reveal" href="webdesign-gastronomie-duesseldorf.html"><div class="card__icon">🍽️</div><h3>Gastronomie</h3><p>Restaurant, Café, Bäckerei, Bar und Catering.</p><span class="card__more">Mehr erfahren →</span></a>
+          <a class="card card--link reveal" href="webdesign-praxis-duesseldorf.html"><div class="card__icon">🩺</div><h3>Praxen & Gesundheit</h3><p>Physio, Heilpraktiker, Zahnarzt, Therapie und Coaching.</p><span class="card__more">Mehr erfahren →</span></a>
+          <a class="card card--link reveal" href="webdesign-friseur-beauty-duesseldorf.html"><div class="card__icon">✂️</div><h3>Friseur & Beauty</h3><p>Friseur, Kosmetik, Nagelstudio, Barber und Fitness.</p><span class="card__more">Mehr erfahren →</span></a>
+          <a class="card card--link reveal" href="webdesign-freiberufler-duesseldorf.html"><div class="card__icon">📊</div><h3>Freiberufler & Beratung</h3><p>Steuerberater, Anwalt, Architekt und Makler.</p><span class="card__more">Mehr erfahren →</span></a>
+          <a class="card card--link reveal" href="webdesign-einzelhandel-duesseldorf.html"><div class="card__icon">🛍️</div><h3>Einzelhandel</h3><p>Ladengeschäfte, Boutiquen und lokale Läden.</p><span class="card__more">Mehr erfahren →</span></a>
         </div>
       </div>
     </section>
