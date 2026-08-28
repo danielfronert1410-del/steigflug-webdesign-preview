@@ -120,6 +120,8 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
 .card--link h3{color:var(--ink);}
 .card--link p{color:var(--muted-text);}
 .card__more{margin-top:auto;padding-top:12px;color:var(--accent-dim);font-weight:600;font-size:.92rem;}
+/* Footer 4-spaltig (Branchen-Spalte) ab Desktop; Handy bleibt einspaltig */
+@media(min-width:900px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr 1fr;}}
 
 /* --- NUR Handy (<=600px): grosses Steigflug-Emblem ganz oben, ueber die volle Seitenbreite. Desktop unveraendert. --- */
 @media (max-width:600px){
@@ -239,7 +241,7 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
       <div class="footer-grid">
         <div class="footer__brand">
           <span class="brand__name" style="font-family:var(--font-display);">Steigflug Webdesign</span>
-          <p style="margin-top:12px;">Steigflug Webdesign baut kleinen und mittelständischen Unternehmen Websites, die bei Google und in KI-Antworten gefunden werden, und hält sie mit laufender Betreuung im Steigflug. Aus Düsseldorf, von einem Piloten.</p>
+          <p style="margin-top:12px;">Websites, die abheben. · Düsseldorf</p>
         </div>
         <div>
           <h3>Seiten</h3>
@@ -248,6 +250,15 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
           <a href="ueber-uns.html">Über mich</a>
           <a href="referenzen.html">Referenzen</a>
           <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div>
+          <h3>Branchen</h3>
+          <a href="webdesign-handwerk-duesseldorf.html">Handwerk</a>
+          <a href="webdesign-gastronomie-duesseldorf.html">Gastronomie</a>
+          <a href="webdesign-praxis-duesseldorf.html">Praxen & Gesundheit</a>
+          <a href="webdesign-friseur-beauty-duesseldorf.html">Friseur & Beauty</a>
+          <a href="webdesign-freiberufler-duesseldorf.html">Freiberufler & Beratung</a>
+          <a href="webdesign-einzelhandel-duesseldorf.html">Einzelhandel</a>
         </div>
         <div>
           <h3>Kontakt</h3>
