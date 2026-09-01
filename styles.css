@@ -140,6 +140,8 @@ body:has(.site-video-bg) .section--surface { background: color-mix(in srgb, var(
 .split--reverse .split__media { order: 2; }
 .split__media img { border-radius: var(--radius); box-shadow: var(--shadow); }
 .media-frame { border-radius: var(--radius); background: var(--surface); padding: 40px; box-shadow: var(--shadow-sm); }
+.img-band { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+.img-band img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
 .split--top .split__media { display: flex; flex-direction: column; height: 100%; }
 .split__logo { width: 260px; max-width: 72%; margin: 28px auto; display: block; }
 .split--top .split__logo { margin-top: auto; margin-bottom: auto; }
