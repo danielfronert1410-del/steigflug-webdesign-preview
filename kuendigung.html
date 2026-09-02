@@ -164,7 +164,7 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
     <section class="section">
       <div class="wrap narrow reveal">
         <h1 style="font-size:clamp(2rem,4vw,2.6rem);margin-bottom:14px;">Verträge hier kündigen</h1>
-        <p style="color:var(--muted-text);max-width:72ch;">Hier kannst du deinen bei Steigflug Webdesign geschlossenen Vertrag (Website-Betreuung oder Mietwebsite) online kündigen. Fülle dazu die folgenden Felder aus. Nach dem Absenden erhältst du umgehend eine Bestätigung an die angegebene E-Mail-Adresse mit Inhalt, Datum und Uhrzeit des Zugangs deiner Kündigung sowie dem Zeitpunkt, zu dem dein Vertrag endet.</p>
+        <p style="color:var(--muted-text);max-width:72ch;">Hier kannst du deinen bei Steigflug Webdesign geschlossenen Vertrag zur Website-Betreuung online kündigen. Fülle dazu die folgenden Felder aus. Nach dem Absenden erhältst du umgehend eine Bestätigung an die angegebene E-Mail-Adresse mit Inhalt, Datum und Uhrzeit des Zugangs deiner Kündigung sowie dem Zeitpunkt, zu dem dein Vertrag endet.</p>
         <form class="form kform" action="https://formspree.io/f/DEIN_FORMULAR_ID" method="POST" style="margin-top:26px;">
           <input type="hidden" name="_subject" value="Kündigung über die Website (§ 312k BGB)">
           <fieldset class="kform__group">
@@ -174,9 +174,8 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
             <label class="kform__field">Kündigungsgrund (nur bei außerordentlicher Kündigung)<textarea name="Kündigungsgrund" rows="2"></textarea></label>
           </fieldset>
           <fieldset class="kform__group">
-            <legend>2 · Welchen Vertrag möchtest du kündigen?</legend>
-            <label class="kform__radio"><input type="radio" name="Vertragsart" value="Website-Betreuung" required> Website-Betreuung</label>
-            <label class="kform__radio"><input type="radio" name="Vertragsart" value="Mietwebsite"> Mietwebsite</label>
+            <legend>2 · Angaben zum Vertrag</legend>
+            <input type="hidden" name="Vertragsart" value="Website-Betreuung">
             <label class="kform__field">Domain / Projekt<input type="text" name="Domain / Projekt"></label>
             <label class="kform__field">Vertrags-/Kundennummer (falls vorhanden)<input type="text" name="Vertrags-/Kundennummer"></label>
           </fieldset>
