@@ -162,11 +162,24 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
   </header>
 
   <main>
-    <section class="section" style="padding-bottom:40px;">
-      <div class="wrap narrow center reveal">
-        <p class="eyebrow">Für Freiberufler & Beratung in Düsseldorf</p>
-        <h1 style="font-size:clamp(2.2rem,5vw,3.2rem);">Webdesign für Freiberufler & Beratung in Düsseldorf</h1>
-        <p class="lead">Ein Auftritt, der Kompetenz und Seriosität ausstrahlt, damit Mandanten und Kunden dich ernst nehmen, bevor ihr euch das erste Mal sprecht. Für Steuerberater, Anwälte, Architekten, Makler und Berater.</p>
+    <section class="section hero hero--video">
+      <img class="hero__bg-still" src="assets/img/freiberufler-beratung-still.jpg" alt="" aria-hidden="true" />
+      <video class="hero__bg" autoplay muted playsinline preload="auto" poster="assets/img/freiberufler-beratung-poster.jpg">
+        <source src="assets/video/freiberufler-beratung.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__bg-overlay"></div>
+      <script>(function(){var h=document.currentScript.closest('.hero'),v=h.querySelector('.hero__bg');if(!v)return;v.loop=false;var reset=function(){try{v.currentTime=0;}catch(e){}};reset();v.addEventListener('loadedmetadata',reset);var toStill=function(){h.classList.add('hero--stilled');};v.addEventListener('ended',toStill);v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>=v.duration-0.02)toStill();});})();</script>
+      <div class="wrap narrow center">
+        <div class="reveal">
+          <p class="eyebrow">Für Freiberufler & Beratung in Düsseldorf</p>
+          <h1>Webdesign für Freiberufler & Beratung in Düsseldorf</h1>
+          <p class="lead">Ein Auftritt, der Kompetenz und Seriosität ausstrahlt, damit Mandanten und Kunden dich ernst nehmen, bevor ihr euch das erste Mal sprecht. Für Steuerberater, Anwälte, Architekten, Makler und Berater.</p>
+          <div class="hero__cta" style="justify-content:center;">
+            <a class="btn btn--primary" href="kontakt.html">Erstgespräch anfragen</a>
+            <a class="btn btn--ghost" href="leistungen.html">Unsere Leistungen</a>
+          </div>
+        </div>
+        
       </div>
     </section>
 
