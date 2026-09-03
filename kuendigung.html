@@ -165,8 +165,12 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
       <div class="wrap narrow reveal">
         <h1 style="font-size:clamp(2rem,4vw,2.6rem);margin-bottom:14px;">Verträge hier kündigen</h1>
         <p style="color:var(--muted-text);max-width:72ch;">Hier kannst du deinen bei Steigflug Webdesign geschlossenen Vertrag zur Website-Betreuung online kündigen. Fülle dazu die folgenden Felder aus. Nach dem Absenden erhältst du umgehend eine Bestätigung an die angegebene E-Mail-Adresse mit Inhalt, Datum und Uhrzeit des Zugangs deiner Kündigung sowie dem Zeitpunkt, zu dem dein Vertrag endet.</p>
-        <form class="form kform" action="https://formspree.io/f/DEIN_FORMULAR_ID" method="POST" style="margin-top:26px;">
+        <form class="form kform" action="https://formsubmit.co/info@steigflug-webdesign.de" method="POST" style="margin-top:26px;">
           <input type="hidden" name="_subject" value="Kündigung über die Website (§ 312k BGB)">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <input type="hidden" name="_autoresponse" value="Wir bestätigen den Eingang deiner Kündigungserklärung bei Steigflug Webdesign. Deine Kündigung ist eingegangen und wird bearbeitet; die Einzelheiten zum Vertragsende erhältst du zeitnah in einer persönlichen Bestätigung per E-Mail. Diese automatische Nachricht bestätigt den Zugang deiner Erklärung (§ 312k Abs. 3 BGB).">
           <fieldset class="kform__group">
             <legend>1 · Art der Kündigung</legend>
             <label class="kform__radio"><input type="radio" name="Art der Kündigung" value="Ordentliche Kündigung" required> Ordentliche Kündigung (zum nächstmöglichen Termin)</label>
@@ -192,7 +196,7 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
           </fieldset>
           <fieldset class="kform__group">
             <legend>5 · Bestätigung senden an</legend>
-            <label class="kform__field">E-Mail-Adresse für die elektronische Zugangsbestätigung<input type="email" name="_replyto" required></label>
+            <label class="kform__field">E-Mail-Adresse für die elektronische Zugangsbestätigung<input type="email" name="email" required></label>
           </fieldset>
           <p style="color:var(--muted-text);font-size:.9rem;">Mit Klick auf „jetzt kündigen" gibst du deine Kündigungserklärung ab. Datum und Uhrzeit der Abgabe werden erfasst. Du erhältst den Zugang deiner Kündigung umgehend per E-Mail bestätigt (§ 312k Abs. 3 BGB). Tipp: Erklärung vor dem Absenden ausdrucken oder speichern.</p>
           <button type="submit" class="btn btn--primary" style="margin-top:6px;">jetzt kündigen</button>
