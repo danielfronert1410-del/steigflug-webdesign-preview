@@ -273,3 +273,11 @@ a.project-card:hover .shot__link { color: var(--accent); }
   .cta-band { padding: 40px 24px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
+
+/* Pflichthinweis zur Umsatzsteuer an Preisangaben (§ 3 PAngV, § 19 UStG) */
+.price-note {
+  margin-top: 18px;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--muted-text);
+}
