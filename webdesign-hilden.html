@@ -142,10 +142,56 @@ details.qa{background:#0E1D34!important;border-color:rgba(120,160,210,.18)!impor
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://steigflug-webdesign.de/"},{"@type":"ListItem","position":2,"name":"Webdesign Hilden: Websites","item":"https://steigflug-webdesign.de/webdesign-hilden.html"}]}</script>
   <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
 <script>
-var clickRankAi = document.createElement("script");
-clickRankAi.src = "https://js.clickrank.ai/seo/2ab5fc83-8dfd-48ba-9e09-731559dbbe3d/script?" + new Date().getTime();
-clickRankAi.async = true;
-document.head.appendChild(clickRankAi);
+(function(){
+  var KEY="sf_consent";
+  function loadCR(){
+    if(window.__sfCR)return; window.__sfCR=1;
+    var s=document.createElement("script");
+    s.src="https://js.clickrank.ai/seo/2ab5fc83-8dfd-48ba-9e09-731559dbbe3d/script?"+new Date().getTime();
+    s.async=true; document.head.appendChild(s);
+  }
+  function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+  function rm(id){var e=document.getElementById(id); if(e&&e.parentNode)e.parentNode.removeChild(e);}
+  function toggle(){
+    if(document.getElementById("sf-cg"))return;
+    var b=document.createElement("button");
+    b.id="sf-cg"; b.type="button"; b.title="Datenschutz-Einstellungen"; b.setAttribute("aria-label","Datenschutz-Einstellungen");
+    b.innerHTML="⚙";
+    b.style.cssText="position:fixed;left:16px;bottom:16px;z-index:2147483646;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:#0F1E38;color:#A6B6CC;font-size:20px;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.4);opacity:.8";
+    b.onclick=banner;
+    document.body.appendChild(b);
+  }
+  function banner(){
+    rm("sf-cc");
+    var w=document.createElement("div");
+    w.id="sf-cc";
+    w.style.cssText="position:fixed;left:0;right:0;bottom:0;z-index:2147483647;display:flex;justify-content:center;padding:16px";
+    var box=document.createElement("div");
+    box.style.cssText="max-width:640px;width:100%;background:#0F1E38;color:#EAF1F8;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px 22px;box-shadow:0 14px 44px rgba(0,0,0,.55);font:14px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif";
+    box.innerHTML='<div style="font-weight:600;font-size:15px;margin-bottom:6px">Deine Privatsphäre</div><div style="color:#A6B6CC;margin-bottom:16px">Optional setzen wir das Analyse-Tool <strong>ClickRank</strong> ein, um diese Website zu verbessern. Dabei wird eine Verbindung zu einem US-Dienst hergestellt und deine IP-Adresse übertragen. Das geschieht nur mit deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 TDDDG) und ist jederzeit widerrufbar. Mehr in der <a href="datenschutz.html" style="color:#4FA0F5">Datenschutzerklärung</a>.</div>';
+    var row=document.createElement("div");
+    row.style.cssText="display:flex;gap:10px;flex-wrap:wrap";
+    var no=document.createElement("button");
+    no.type="button"; no.textContent="Ablehnen";
+    no.style.cssText="flex:1 1 0;min-width:140px;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#EAF1F8;font-weight:600;font-size:14px;cursor:pointer";
+    var yes=document.createElement("button");
+    yes.type="button"; yes.textContent="Akzeptieren";
+    yes.style.cssText="flex:1 1 0;min-width:140px;padding:12px 16px;border-radius:10px;border:1px solid transparent;background:#218BEC;color:#fff;font-weight:600;font-size:14px;cursor:pointer";
+    no.onclick=function(){set("no");rm("sf-cc");toggle();};
+    yes.onclick=function(){set("yes");rm("sf-cc");toggle();loadCR();};
+    row.appendChild(no); row.appendChild(yes); box.appendChild(row); w.appendChild(box);
+    (document.body||document.documentElement).appendChild(w);
+  }
+  function init(){
+    var c=get();
+    if(c==="yes"){loadCR();toggle();}
+    else if(c==="no"){toggle();}
+    else{banner();}
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);
+  else init();
+})();
 </script>
 </head>
 <body>
@@ -278,7 +324,7 @@ document.head.appendChild(clickRankAi);
           <h3>Kontakt</h3>
           <a href="tel:016096284640">0160 9628 4640</a>
           <a href="mailto:info@steigflug-webdesign.de">info@steigflug-webdesign.de</a>
-          <a href="#" target="_blank" rel="noopener">Mühlenstraße 7, 40213 Düsseldorf ↗</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=M%C3%BChlenstra%C3%9Fe+7+40213+D%C3%BCsseldorf" target="_blank" rel="noopener">Mühlenstraße 7, 40213 Düsseldorf ↗</a>
           <a href="kontakt.html">Kontakt & Anfahrt</a>
         </div>
       </div>
